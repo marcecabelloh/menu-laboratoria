@@ -1,13 +1,55 @@
-body{
-	font-family: 'Indie Flower', cursive;
-	color: white;
-}
+/*estilos de menu desplegable y cambio de letra al cambiar la resolución*/
 
 @media(min-width: 200px) and (max-width: 534px){
 	
 	body{
 		font-family: 'Lobster', cursive;
-		color: white;
+		color: red;
 	}
 
 
+	.navbar{ 
+		display: none;
+		background-color: black;
+		min-width: 100px;   
+		z-index: -1;
+	}
+
+	.lista-menu.flex-container {
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	.flex-container ul{
+		display: flex;
+		flex-direction: column;	
+	}
+
+
+	#menux.lista-menu ul li {
+		font-size: 25px;
+		text-decoration: none;
+		color: white;
+	}
+
+	.lista-menu ul li a{
+		font-size: 15px;
+		text-decoration: none;
+		color: white;
+		border-bottom: 2px solid #6B6B6B;
+		padding: 0;
+		border-right: 0px solid rgba(0,0,0,0.0);
+	}
+	.flex-container a:hover {
+		background-color: #FF6666;
+	}
+	
+	/*se muestra*/
+	#menux{
+		display: inline-block;
+	}
+	/*se oculta el menú anterior*/
+	.hidens{
+		display: none;
+	}
+}

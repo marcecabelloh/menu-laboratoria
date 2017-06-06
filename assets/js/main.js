@@ -1,14 +1,17 @@
+
+//función que permite que al tocar el enlace menú se despliegue mi menú oculto
+
 function despegable(){
-	//se llama menu que está con display none en css, en media pasa a ser display inline-block.
-	var men = document.getElementById("menux");
-	//se llama clase de todos mis a para recorrerlo por eso está el array.from
+	
+	var men = document.getElementById("menu");
+	//recorrer todos los elementos a 
 	var menus = Array.from(document.getElementsByClassName("mostrar"));
 
-	//le creo un escuchador
+	//al clickear el el menú se ejecute la función 
 	men.addEventListener("click", function(event){
-		//esto es para que no salte la pagina
+		
 		event.preventDefault();
-		//y aquí me recorre todas mi a con clase mostrar
+		
 		menus.forEach(function(link) {
 			//con toggle me elimina todas las clases hidens (toggle, se puede apretar nuevamente y se esconde)
 			link.classList.toggle("hidens");
@@ -19,4 +22,4 @@ function despegable(){
 despegable();
 
     
-
+//al examinar la página muestra cambio de ltra y que desparece el menú principal pero no aparece el menú despegable
